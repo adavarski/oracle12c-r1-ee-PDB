@@ -20,7 +20,10 @@ Running
 On first run, the database will be provisioned. Using a basic command like `docker run `davarski/oracle12c-r1-ee will set defaults for everything.  
 
 ```
+
 docker run -p 1521:1521 -p 5500:5500 -e ORACLE_SID=atscale -e ORACLE_PWD=atscale -e ORACLE_MEM=2000 -v /opt/oracle/oradata -d davarski/oracle12c-r1-ee
+
+docker run -p 1521:1521 -p 5500:5500 -e ORACLE_SID=atscale -e ORACLE_PWD=atscale -e ORACLE_CDB=atscale -e ORACLE_MEM=2000 -v /opt/oracle/oradata -d davarski/oracle12c-r1-ee
 ```
 
 Check out the parameters below for a description of the options available.
